@@ -2,9 +2,7 @@ import {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import './addJobForm.css';
 
-
-function submit(post) {
-    const navigate = useNavigate();
+function submit(post, navigate) {
     post.skills = post.skills?.split(',') || [];
     fetch('http://localhost:4000/posts', {
         method: 'POST',
@@ -15,6 +13,7 @@ function submit(post) {
 }
 
 export default function AddJobForm() {
+    const navigate = useNavigate();
     const [post, setPost] = useState({ id: '', title: '', description: '', years: 0, skills: []});
     const [id, setId] = useState('');
     const [title, setTitle] = useState('');
@@ -48,7 +47,7 @@ export default function AddJobForm() {
                         <input type="text" name="skills" value={skills} onChange={(e) => {setSkills((e.target.value))}}/>
                     </div>
                 </div>
-                <button onClick={() => submit({ id, title, description, years, skills })}>Submit</button>
+                <button onClick={() => submit({ id, title, description, years, skills }, navigate)}>Submit</button>
             </div>
         </div>
     );
