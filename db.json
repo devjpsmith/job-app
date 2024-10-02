@@ -1,0 +1,82 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Java Developer",
+      "description": "Must have good experience in core Java and advanced Java",
+      "years": 2,
+      "skills": [
+        "Core Java",
+        "J2EE",
+        "Spring Boot",
+        "Hibernate"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Frontend Developer",
+      "description": "Experience in building responsive web applications using React",
+      "years": 3,
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Machine Learning",
+      "description": "Strong background in machine learning and data analysis",
+      "years": 4,
+      "skills": [
+        "Python",
+        "Machine Learning",
+        "Data Analysis"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Network Engineer",
+      "description": "Design and implement computer networks for efficient data communication",
+      "years": 5,
+      "skills": [
+        "Networking",
+        "Cisco",
+        "Routing",
+        "Switching"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Mobile App Developer",
+      "description": "Experience in mobile app development for iOS and Android",
+      "years": 5,
+      "skills": [
+        "iOS Development",
+        "Android Development",
+        "Mobile App"
+      ]
+    },
+    {
+      "id": "101",
+      "title": ".NET Developer",
+      "description": "Previous .NET developer looking to switch to Java and ReactJS",
+      "years": "1",
+      "skills": [
+        "dotnet"
+      ]
+    },
+    {
+      "id": "102",
+      "title": "SQL Admin",
+      "description": "Database administrator to oversee migrations and query optimization.",
+      "years": "4",
+      "skills": [
+        "MS SQL",
+        " MySQL",
+        " PostGres"
+      ]
+    }
+  ]
+}

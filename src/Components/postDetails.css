@@ -1,0 +1,9 @@
+.post-details-section {
+    /*width: 100%;*/
+    min-width: 50%;
+}
+
+.post-details-card {
+    width: 100%;
+    padding: 10px 0px 0px 20px;
+}
