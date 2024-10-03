@@ -7,16 +7,7 @@
 .add-form-card {
     padding: 20px;
     min-width: 40%;
-}
-
-.add-form-card button {
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 6px;
-}
-
-.add-form-card button:hover {
-    background-color: #bfbfbf;
+    background-color: rgba(190, 190, 190, 0.26);
 }
 
 .add-form-card h3 {

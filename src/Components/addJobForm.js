@@ -1,10 +1,11 @@
 import {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import './addJobForm.css';
+import Button from "./shared/button";
 
 function submit(post, navigate) {
     post.skills = post.skills?.split(',') || [];
-    fetch('http://localhost:4000/posts', {
+    fetch(`${process.env.REACT_APP_API_HOST}/posts`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(post)
@@ -18,7 +19,7 @@ export default function AddJobForm() {
     const [id, setId] = useState('');
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [years, setYears] = useState(0);
+    const [experience, setExperience] = useState(0);
     const [skills, setSkills] = useState('');
 
     return (
@@ -28,26 +29,35 @@ export default function AddJobForm() {
                 <div className="job-form">
                     <div className='job-field-input'>
                         <label htmlFor="id">Post Id</label>
-                        <input type="text" name="id" id="id" value={id} onChange={(e) => setId(e.target.value)} />
+                        <input type="text" name="id" id="id" value={id}
+                               onChange={(e) => setId(e.target.value)} />
                     </div>
                     <div className='job-field-input'>
                         <label htmlFor="title">Title</label>
-                        <input type="text" name="title" id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
+                        <input type="text" name="title" id="title" value={title}
+                               onChange={(e) => setTitle(e.target.value)} />
                     </div>
                     <div className='job-field-input'>
                         <label htmlFor="description">Description</label>
-                        <input type="text" name="description" id="description" value={description} onChange={(e) => setDescription(e.target.value)} />
+                        <input type="text" name="description" id="description" value={description}
+                               onChange={(e) => setDescription(e.target.value)} />
                     </div>
                     <div className='job-field-input'>
                         <label htmlFor="years">Years</label>
-                        <input type="number" name="years" id="years" value={years} onChange={(e) => {setYears(e.target.value)}}/>
+                        <input type="number" name="years" id="years" value={experience}
+                               onChange={(e) => {setExperience(e.target.value)}}/>
                     </div>
                     <div className='job-field-input'>
                         <label htmlFor="skills">Skills</label>
-                        <input type="text" name="skills" value={skills} onChange={(e) => {setSkills((e.target.value))}}/>
+                        <input type="text" name="skills" value={skills}
+                               onChange={(e) => {setSkills((e.target.value))}}/>
                     </div>
                 </div>
-                <button onClick={() => submit({ id, title, description, years, skills }, navigate)}>Submit</button>
+                <Button
+                    text={'Add Job'}
+                    type={'primary'}
+                    onClick={() => submit({ id, title, description, years: experience, skills }, navigate)}
+                />
             </div>
         </div>
     );

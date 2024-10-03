@@ -10,7 +10,7 @@ export default function JobsBoard(props) {
 
     useEffect(() => {
         if (isLoading)
-            fetch("http://localhost:4000/posts")
+            fetch(`${process.env.REACT_APP_API_HOST}/posts`, {})
                 .then(res => res.json())
                 .then(data => {
                     setIsLoading(false);
@@ -25,7 +25,12 @@ export default function JobsBoard(props) {
                     <>
                         <div className="posts-list">
                             {posts.map(post => (
-                                <JobCard key={post.id} post={post} selectPost={setSelectedJob} />
+                                <JobCard
+                                    key={post.id}
+                                    post={post}
+                                    isSelected={selectedJob && selectedJob.id === post.id}
+                                    selectPost={setSelectedJob}
+                                />
                             ))}
                         </div>
                         <PostDetails post={selectedJob}/>

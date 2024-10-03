@@ -8,7 +8,7 @@ export default function PostDetails({ post }) {
                     <div className="post-details-card card">
                         <h2>{post.title}</h2>
                         <p>{post.description}</p>
-                        <p>Required Years Exp: {post.years}</p>
+                        <p>Required Years Exp: {post.experience}</p>
                         Required Skills:
                         <ul>
                             {post.skills.map(skill => (

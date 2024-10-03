@@ -1,4 +1,4 @@
-import NavBar from './Components/navBar';
+import NavBar from './Components/shared/navBar';
 import './Dashboard.css';
 import JobsBoard from "./Components/jobsBoard";
 
