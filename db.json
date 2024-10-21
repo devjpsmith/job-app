@@ -5,6 +5,10 @@
       "title": "Java Developer",
       "description": "Must have good experience in core Java and advanced Java",
       "years": 2,
+      "postedDateTime": "2024-10-09 14:00:00",
+      "expirationDateTime": "2024-10-24 23:59:59",
+      "lowPay": 90000,
+      "highPay": 95000,
       "skills": [
         "Core Java",
         "J2EE",
@@ -17,6 +21,10 @@
       "title": "Frontend Developer",
       "description": "Experience in building responsive web applications using React",
       "years": 3,
+      "postedDateTime": "2024-10-08 12:00:00",
+      "expirationDateTime": "2024-11-24 23:59:59",
+      "lowPay": 70000,
+      "highPay": 80000,
       "skills": [
         "HTML",
         "CSS",
@@ -29,6 +37,10 @@
       "title": "Machine Learning",
       "description": "Strong background in machine learning and data analysis",
       "years": 4,
+      "postedDateTime": "2024-10-02 14:00:00",
+      "expirationDateTime": "2024-10-24 23:59:59",
+      "lowPay": 130000,
+      "highPay": 145000,
       "skills": [
         "Python",
         "Machine Learning",
@@ -39,7 +51,11 @@
       "id": "4",
       "title": "Network Engineer",
       "description": "Design and implement computer networks for efficient data communication",
-      "years": 5,
+      "years": 6,
+      "postedDateTime": "2024-10-09 08:00:00",
+      "expirationDateTime": "2024-10-16 23:59:59",
+      "lowPay": 110000,
+      "highPay": 115000,
       "skills": [
         "Networking",
         "Cisco",
@@ -52,40 +68,14 @@
       "title": "Mobile App Developer",
       "description": "Experience in mobile app development for iOS and Android",
       "years": 5,
+      "postedDateTime": "2024-10-02 14:00:00",
+      "expirationDateTime": "2024-10-09 23:59:59",
+      "lowPay": 95000,
+      "highPay": 95000,
       "skills": [
         "iOS Development",
         "Android Development",
         "Mobile App"
-      ]
-    },
-    {
-      "id": "101",
-      "title": ".NET Developer",
-      "description": "Previous .NET developer looking to switch to Java and ReactJS",
-      "years": "1",
-      "skills": [
-        "dotnet"
-      ]
-    },
-    {
-      "id": "102",
-      "title": "SQL Admin",
-      "description": "Database administrator to oversee migrations and query optimization.",
-      "years": "4",
-      "skills": [
-        "MS SQL",
-        " MySQL",
-        " PostGres"
-      ]
-    },
-    {
-      "id": "103",
-      "title": "Test",
-      "description": "Test test",
-      "years": 0,
-      "skills": [
-        "golang",
-        " rust"
       ]
     }
   ]

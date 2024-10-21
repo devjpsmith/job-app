@@ -1,32 +1,42 @@
+:root {
+  --primary-300: #448387;
+  --primary-500: #387478;
+  --primary-700: #30676B;
+  --secondary-300: #7BB09E;
+  --secondary-500: #629584;
+  --secondary-700: #578575;
+  --tertiary-300: #F0FAF3;
+  --tertiary-500: #E2F1E7;
+  --tertiary-700: #C3D9CA;
+  --gray-900: #243642;
+  --gray-700: #4E6B6D;
+  --gray-500: #87A0A3;
+  --gray-300: #C2D7DA;
+  --gray-100: #EDF3F5;
+  --success: #578575;
+  --warning: #EDDB3C;
+  --danger: #DF6453;
+}
+
 body {
-  margin: 0;
-  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/
-  /*  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
-  /*  sans-serif;*/
-  font-family: 'Ubuntu', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.container {
-  padding: 20px 20px;
-  color: #3f3f3f;
-}
-
-.card {
-  border: 1px solid #888888;
-  border-radius: 6px;
-  -webkit-box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.20);
-  box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.20);
+  background-color: var(--gray-100);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  color: #263493;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--gray-700);
+}
+
+p, li, span, button {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--gray-500);
+}
+
+.card {
+  border: 1px solid transparent;
 }

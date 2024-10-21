@@ -1,12 +1,17 @@
 .job-card {
-    padding: 20px;
     cursor: pointer;
 }
 
 .job-card:hover {
-    border: 1px solid #2F4BFF;
+    border: 1px solid var(--primary-500);
 }
 
 .selected {
-    background-color: rgba(190, 190, 190, 0.26);
+    background-color: var(--tertiary-300);
+}
+
+.hourglass-svg, .history-svg {
+    height: 16pt;
+    fill: var(--gray-500);
+    padding-right: .25em;
 }

@@ -1,19 +1,28 @@
 .button {
     padding: 10px;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 .button-primary {
-    background: #263493;
-    color: #fff;
+
+    background: linear-gradient(var(--primary-500), var(--secondary-500));
+    border: 1px solid var(--primary-500);
     font-weight: bold;
+    color: var(--tertiary-300);
+}
+
+.button-unselected {
+    background: var(#FFF);
+    border: 1px solid var(--primary-500);
+    font-weight: bold;
+    color: var(--primary-500);
 }
 
 .button:hover {
-    background-color: #bfbfbf;
+    border: 1px solid var(--secondary-300);
 }
 
 .button-primary:hover {
-    background: rgba(38, 52, 147, 0.78);
+    border: 1px solid var(--secondary-300);
 }

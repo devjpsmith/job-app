@@ -1,0 +1,15 @@
+.medal svg {
+    height: 32pt;
+}
+
+.medal-gold svg {
+    fill: url(#gold-shimmer) #fff;
+}
+
+.medal-silver svg {
+    fill: url(#silver-shimmer);
+}
+
+.medal-bronze svg {
+    fill: #A45A16;
+}

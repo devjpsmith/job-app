@@ -1,0 +1,41 @@
+.searchbar-row {
+    padding: 10px 0 10px 0;
+}
+
+.sort-label {
+    text-transform: uppercase;
+    color: var(--primary-700);
+}
+
+input {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: .25em .5em .25em .5em;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid var(--secondary-700);
+}
+
+@media only screen and (min-width: 600px) {
+    .sort-dropdown {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sort-panel span, .sort-panel button {
+        display: none;
+    }
+
+    .dropdown-item.active {
+        background-color: var(--primary-500);
+    }
+
+    .sort-panel svg {
+        height: 24pt;
+        fill: var(--primary-700);
+    }
+}

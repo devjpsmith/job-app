@@ -1,16 +1,20 @@
-.jobs-board {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-}
-
-.posts-list {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 .post-details {
 
+}
+
+@media only screen and (max-width: 600px) {
+    .post-details-main {
+        display: none;
+    }
+
+    .post-details-main.selected {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .job-board.selected {
+        display: none;
+    }
 }
