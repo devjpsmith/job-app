@@ -9,11 +9,11 @@ export default function JobsBoard(props) {
     const [isLoading, setIsLoading] = useState(true);
     const [posts, setPosts] = useState([]);
     const [selectedJob, setSelectedJob] = useState(null);
-    const [sort, setSort] = useState('');
+    const [sort, setSort] = useState('-postedDateTime');
     const [search, setSearch] = useState('');
 
-    const getPosts = () => {
-        fetch(`${process.env.REACT_APP_API_HOST}/posts?_sort=${sort}`, {})
+    const getPosts = (searchArg, sortArg) => {
+        fetch(`${process.env.REACT_APP_API_HOST}/posts?_term=${searchArg}&_sort=${sortArg}`, {})
             .then(res => res.json())
             .then(data => {
                 setIsLoading(false);
@@ -26,14 +26,26 @@ export default function JobsBoard(props) {
             getPosts();
     });
 
-    const updateSort = (sort) => {
-        setIsLoading(true);
+    const getNewSort = (newSort) => {
+        if (newSort === Sorts.highestPay) return '-highPay';
+        if (newSort === Sorts.experienceLevel) return '-years';
+        return '-postedDateTime';
+    };
+
+    const updateSort = (sortUpdate) => {
+        // setIsLoading(true);
         setSelectedJob(null);
-        if (sort === Sorts.mostRecent) setSort('-postedDateTime');
-        if (sort === Sorts.experienceLevel) setSort('-years');
-        if (sort === Sorts.highestPay) setSort('-highPay');
-        getPosts();
+        const newSort = getNewSort(sortUpdate);
+        setSort(newSort);
+        getPosts(search, newSort);
     }
+
+    const updateSearch = (searchTerm) => {
+        setSearch(searchTerm);
+        if (!searchTerm || searchTerm.length > 2) {
+            getPosts(searchTerm, sort);
+        }
+    };
 
     const filter = (post, term) => {
         if (term && term.length > 2)
@@ -45,14 +57,13 @@ export default function JobsBoard(props) {
     return (
         <div className="jobs-board">
             <>
-                <SearchBar setSort={updateSort} setSearch={setSearch} searchTerm={search} setSearchTerm={setSearch} />
+                <SearchBar setSort={updateSort} searchTerm={search} setSearchTerm={updateSearch} />
                 { !isLoading && (
                     <>
                         <div className="row">
                             <div className={'col-lg-4 job-board' + (!!selectedJob ? ' selected' : '')}>
                                 <div className="row gy-2">
-                                    {posts.filter(post => !search || filter(post, search))
-                                        .map(post => (
+                                    {posts.map(post => (
                                         <JobCard
                                             key={post.id}
                                             post={post}
